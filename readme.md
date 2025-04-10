@@ -5,6 +5,7 @@
 - Since lateral control is currently performed using the LKAS command, steering does not work below 50 km.
 - Only tested on the 2023 Land Rover Defender 130.
 
+## 📌 Requirements
 - [comma 3 or comma 3x](https://comma.ai)
 - [Flexray Board for processing Flexray data](#-📌-Flexray-Board-for-processing-Flexray-data),  [Reference Willem Melching's Blog](https://icanhack.nl/blog/audi-flexray/)
 - [Y cable harness for IPMA(Image Processing Module)](#-y-cable-harness-for-ipmaimage-processing-module)
