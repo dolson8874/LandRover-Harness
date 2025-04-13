@@ -22,7 +22,11 @@
 ![FlexRay Board block diagram](images/flexray-board-bd.png)
 
  - [CYC1000 FPGA Module](https://shop.trenz-electronic.de/en/TEI0003-03-QFCR4A-CYC1000-with-Intel-Cyclone-10-LP-10CL025-C8-8-MByte-SDRAM-8-MByte-Flash)
-   - [Change internal FT2232H port B of CYC1000 Mode FastSerial mode for Flexry logging.](https://www.hackster.io/MichalsTC/how-to-use-the-fast-serial-mode-on-a-ftdi-ft2232h-7f0682)
+
+   - For Flexray logging, you need to change the FT2232H Port B on the CYC1000 board to Fast Serial mode.
+   - To enable the Fast Serial mode need to change Port B to use OPTO Isolate, attached is a screen shot of the change using FTDI programmer.
+
+   - [Change internal FT2232H port B of CYC1000 ](https://www.hackster.io/MichalsTC/how-to-use-the-fast-serial-mode-on-a-ftdi-ft2232h-7f0682)
 
 
  - Flexray PHY board
