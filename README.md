@@ -7,9 +7,9 @@
 
 ## 📌 Requirements
 - [comma 3 or comma 3x](https://comma.ai)
-- [Flexray Dev Board for processing Flexray data](#flexray-dev-board),  [(Reference Willem Melching's Blog)](https://icanhack.nl/blog/audi-flexray/)
+- [Flexray Dev Board for processing Flexray data](#-flexray-dev-board),  [(Reference Willem Melching's Blog)](https://icanhack.nl/blog/audi-flexray/)
 - [Y cable harness for IPMA (Image Processing Module)](#-y-cable-harness-for-ipmaimage-processing-module)
-- [Y cable harness for DADC (Driver Assistance Domain Controller)](#-y-cable-harness-for-idadcdriver-assistance-domain-controller) 
+- [Y cable harness for DADC (Driver Assistance Domain Controller)](#-y-cable-harness-for-dadcdriver-assistance-domain-controller) 
 
 
 ## 📌 Harness diagram
@@ -28,11 +28,11 @@
 
 
 
-## 📌 Flexray Board Block diagram for processing Flexray data
+## 📌 Flexray Dev Board Block diagram for processing Flexray data
 <img src="images/flexray-board-bd-v2.png" alt="FlexRay Board block diagram" width="850"/>
 
 
-### 📌 Flexray Board Connector PIN MAP(Main: 22 Pin, GPIO: 20 Pin)
+### 📌 Flexray Dev Board Connector PIN MAP(Main: 22 Pin, GPIO: 20 Pin)
 <img src="images/FLEXRAY-bd-v2-smh-22c.png" alt="22 PIN CONNECTOR" width="450"/> 
 <img src="images/FLEXRAY-bd-v2-smh-20c.png" alt="22 PIN CONNECTOR" width="400"/>
 
