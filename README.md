@@ -1,4 +1,4 @@
-# Installation Guide of C3, openpilot for LAND ROVER DEFENDER
+# Installation Guide of C3/C3X, openpilot for LAND ROVER DEFENDER
 
 ## 📌 Limitation
 - Support only Lateral Control.
@@ -7,35 +7,44 @@
 
 ## 📌 Requirements
 - [comma 3 or comma 3x](https://comma.ai)
-- [Flexray Board for processing Flexray data](#-📌-Flexray-Board-for-processing-Flexray-data),  [Reference Willem Melching's Blog](https://icanhack.nl/blog/audi-flexray/)
-- [Y cable harness for IPMA(Image Processing Module)](#-y-cable-harness-for-ipmaimage-processing-module)
-- [Y cable harness for DADC(Driver Assistance Domain Controller)](#-y-cable-harness-for-idadcdriver-assistance-domain-controller)
-- Relay Box for Flexray (optional) 
----
-
-## 📌 C3 Block diagram
-<img src="images/C3-bd.png" alt="C3 Block diagram" width="750"/>
-
----
-
-## 📌 Flexray Board for processing Flexray data
-![FlexRay Board block diagram](images/flexray-board-bd.png)
-
- - [CYC1000 FPGA Module](https://shop.trenz-electronic.de/en/TEI0003-03-QFCR4A-CYC1000-with-Intel-Cyclone-10-LP-10CL025-C8-8-MByte-SDRAM-8-MByte-Flash)
-
-   - For Flexray logging, you need to change the FT2232H Port B on the CYC1000 board to Fast Serial mode.
-   - To enable the Fast Serial mode need to change Port B to use OPTO Isolate, attached is a screen shot of the change using FTDI programmer.
-
-   - [Change internal FT2232H port B of CYC1000 ](https://www.hackster.io/MichalsTC/how-to-use-the-fast-serial-mode-on-a-ftdi-ft2232h-7f0682)
+- [Flexray Dev Board for processing Flexray data](#flexray-dev-board),  [(Reference Willem Melching's Blog)](https://icanhack.nl/blog/audi-flexray/)
+- [Y cable harness for IPMA (Image Processing Module)](#-y-cable-harness-for-ipmaimage-processing-module)
+- [Y cable harness for DADC (Driver Assistance Domain Controller)](#-y-cable-harness-for-idadcdriver-assistance-domain-controller) 
 
 
- - Flexray PHY board
+## 📌 Harness diagram
+<img src="images/harness-diagram-v2.png" alt="C3/C3X harness diagram" width="850"/>
   
-  <img src="images/Flexray_phy.jpg" alt="C3 Block diagram" width="200"/>
+   - There is no need to connect comma power to comma's harness box.  
+   - [IPMAnd Removal a Installation](https://www.lrdefender.org/image_processing_module_a-753.html)
+   - [DADC Removal a Installation](https://www.lrdefender.org/driver_assistance_systems-690.html)
+     - No need to remove the battery.
+     - Disconnect the footwell panel.
+     - Remove the footwell trim panel.
+     - No need to Remove the accelerator pedal assembly
+
+## 📌 C3/C3X Block diagram
+<img src="images/C3-bd-v2.png" alt="C3/C3X Block diagram" width="850"/>
+
+
+
+## 📌 Flexray Board Block diagram for processing Flexray data
+<img src="images/flexray-board-bd-v2.png" alt="FlexRay Board block diagram" width="850"/>
+
+
+### 📌 Flexray Board Connector PIN MAP(Main: 22 Pin, GPIO: 20 Pin)
+<img src="images/FLEXRAY-bd-v2-smh-22c.png" alt="22 PIN CONNECTOR" width="450"/> 
+<img src="images/FLEXRAY-bd-v2-smh-20c.png" alt="22 PIN CONNECTOR" width="400"/>
+
+
+## 📌 Flexray Dev Board
+<img src="images/Flexray_board_v2.jpg" alt="Flexray Board v2 with case" width="300"/> <img src="images/Flexray_board_v2_with_case.jpg" alt="Flexray Board v2 with case" width="300"/>
 
 ---
 
 ## 📌 Y cable harness for IPMA(Image Processing Module)
+<img src="images/Ycable-IPMA-v2.png" alt="Y cable for IPMA" width="450"/>
+
 - [MX34020SF1](https://www.digikey.kr/ko/products/detail/jae-electronics/-MX34020SF1/2139261)  20 pin female connector 
 - [MX34020PF1](https://www.digikey.kr/ko/products/detail/jae-electronics/MX34020PF1/18996306?s=N4IgTCBcDaILIA0DMAWADGNAHAZiAugL5A) 20 pin male connector
 - [Comma's Harness Box](https://comma.ai/shop/harness-box)
@@ -51,30 +60,10 @@
   | 17  |  BK         | Ground                  |
 
 
-- connect MX34020xF1 and comma's Harness Box 
-                   
-  |    Harness<br>Box|  MX34020PF1<br>(to car)  | MX34020SF1<br>(to cam) |  Flexray Board   |
-  |------------------|--------------------------|------------------------|------------------|
-  |     1 (CAR GND)  |           17             |                        |                  |
-  |     2 (IGN)      |           10             |                        |                  |
-  |     4 (CAN0 H)   |            7             |                        |                  |
-  |     6 (CAN0 L)   |            8             |                        |                  |
-  |     8 (CAN1 H)   |                          |                        |      CAN H       |
-  |    10 (CAN1 L)   |                          |                        |      CAN L       |
-  |    12 (12V IN)   |           10             |                        |                  |
-  |    14 (12V IN)   |                          |         10             |                  |
-  |    16 (IGN)      |                          |         10             |                  |
-  |    18 (CAN1 H)   |                          |                        |                  |
-  |    20 (CAN1 L)   |                          |                        |                  |
-  |    22 (CAN2 H)   |                          |          7             |                  |
-  |    24 (CAN2 L)   |                          |          8             |                  |
-  |    26 (GND   )   |                          |         17             |                  |
-  |        -         |           1 -------------|--------- 1             |                  |
-  |        -         |           2 -------------|--------- 2             |                  |
-    
-
-
 ## 📌 Y cable harness for DADC(Driver Assistance Domain Controller)
+<img src="images/Ycable-DADC-v2.png" alt="Y cable for IPMA" width="350"/>
+ 
+
 - [284714-1](https://ko.aliexpress.com/item/1005004319496605.html?spm=a2g0o.order_list.order_list_main.5.1637140f944ZOH&gatewayAdapt=glo2kor) 24 pin female connector
 
  <img src="images/dadc-female.png" alt="C3 Block diagram" width="150"/> <img src="images/dadc-female2.png" alt="C3 Block diagram" width="150"/>
@@ -111,28 +100,6 @@
   | 19  |  Flexray1_BP (to BCM)                        |   
   | 20  |  Flexray1_BM (to BCM)                        |
   | 21  |  Ground (GND)                                |   
-
- - connect Harness for DADC 
-
-  |  male    (to BCM)        | 284714-1 female<br>(to DADC) |  Flexray Board   |
-  |--------------------------|------------------------------|------------------|
-  |           1 -------------|--------- 1                   |                  |
-  |           3 -------------|--------- 3                   |                  |
-  |           4 -------------|--------- 4                   |                  |
-  |           7 -------------|--------- 8                   |                  |
-  |           8 -------------|--------- 8                   |                  | 
-  |           9 -------------|--------- 9                   |                  |
-  |          11 -------------|---------11                   |                  |
-  |          12 -------------|---------12                   |                  |
-  |          13 -------------|---------13 ------------------|----- 12V         |
-  |          15 -------------|---------15                   |      CAN H       | 
-  |          16 -------------|---------16                   |      CAN L       |
-  |          19              |                              |      FR0+        |
-  |          20              |                              |      FR0-        |              
-  |                          |         19                   |      FR2+        |
-  |                          |         20                   |      FR2-        |   
-  |          21 -------------|---------21 ------------------|----- GND         |
-  
 
 
 
