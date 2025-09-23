@@ -16,7 +16,7 @@
 <img src="images/harness-diagram-v2.png" alt="C3/C3X harness diagram" width="850"/>
   
    - There is no need to connect comma power to comma's harness box.  
-   - [IPMAnd Removal a Installation](https://www.lrdefender.org/image_processing_module_a-753.html)
+   - [IPMA Removal a Installation](https://www.lrdefender.org/image_processing_module_a-753.html)
    - [DADC Removal a Installation](https://www.lrdefender.org/driver_assistance_systems-690.html)
      - No need to remove the battery.
      - Disconnect the footwell panel.
