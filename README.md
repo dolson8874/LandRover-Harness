@@ -38,7 +38,8 @@
 
 
 ## 📌 Flexray Dev Board
-<img src="images/Flexray_board_v2.jpg" alt="Flexray Board v2 with case" width="300"/> <img src="images/Flexray_board_v2_with_case.jpg" alt="Flexray Board v2 with case" width="300"/>
+<img src="images/flexray_board-v2-desc.png" alt="Flexray Board v2 Desc" width="750"/> 
+
 
 ---
 
