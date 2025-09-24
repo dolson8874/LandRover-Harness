@@ -33,8 +33,8 @@
 
 
 ### 📌 Flexray Dev Board Connector PIN MAP(Main: 22 Pin, GPIO: 20 Pin)
-<img src="images/FLEXRAY-bd-v2-smh-22c.png" alt="22 PIN CONNECTOR" width="450"/> 
-<img src="images/FLEXRAY-bd-v2-smh-20c.png" alt="22 PIN CONNECTOR" width="400"/>
+<img src="images/Flexray-bd-v2-smh-22c.png" alt="22 PIN CONNECTOR" width="450"/> 
+<img src="images/Flexray-bd-v2-smh-20c.png" alt="20 PIN CONNECTOR" width="400"/>
 
 
 ## 📌 Flexray Dev Board
