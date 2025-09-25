@@ -121,6 +121,8 @@
   | 13  |  IGN                                         |
   | 15  |  CAN3 H (CCM, Cruise Control Module Radar)   |    
   | 16  |  CAN3 L (CCM, Cruise Control Module Radar)   |
+  | 17  |  CAN5 H (Range Rover Head Light, option)     |
+  | 18  |  CAN5 L (Range Rover Head Light, option)     |
   | 19  |  Flexray1_BP (to BCM)                        |   
   | 20  |  Flexray1_BM (to BCM)                        |
   | 21  |  Ground (GND)                                |   
