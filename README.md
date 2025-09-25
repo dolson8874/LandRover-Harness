@@ -1,4 +1,4 @@
-# Installation Guide of C3/C3X, openpilot for LAND ROVER DEFENDER
+# 🔐 Guide of C3/C3X, openpilot for LAND ROVER DEFENDER
 
 ## 📌 Limitation
 - Support only Lateral Control.
@@ -10,6 +10,29 @@
 - [Flexray Dev Board for processing Flexray data](#-flexray-dev-board),  [(Reference Willem Melching's Blog)](https://icanhack.nl/blog/audi-flexray/)
 - [Y cable harness for IPMA (Image Processing Module)](#-y-cable-harness-for-ipmaimage-processing-module)
 - [Y cable harness for DADC (Driver Assistance Domain Controller)](#-y-cable-harness-for-dadcdriver-assistance-domain-controller) 
+
+## 📌 How to run openpilot & screenshot
+- Engage with the LKAS button 
+  - Ready to lateral control by OP
+  - White color steer wheel icon
+  - White color lane line
+  
+  <img src="images/op-engage-with-lkas-btn.png" alt="engage with LKAS button" width="450"/> 
+
+- Lateral control is in operation by OP
+  - Green color steer wheel icon
+  - Green color lane line 
+
+  <img src="images/op-incontrol-green.png" alt="op lateral control" width="450"/> 
+
+- Detect BSM (Blind Spot Monitor)
+  - Red color lane line when detect BSM
+
+  <img src="images/op-left-right-lane-red.png" alt="op lateral control" width="450"/> 
+
+- Turn on the emergency lights with the ASL button
+  
+  <img src="images/asl-button.png" alt="op lateral control" width="450"/>
 
 
 ## 📌 Harness diagram
